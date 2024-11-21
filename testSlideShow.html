@@ -1,0 +1,117 @@
+<html>
+
+<head>
+	<script>
+		function showHide(d)
+		{
+			var onediv = document.getElementById(d);
+			var divs=['content1','content2','content3','content4'];
+			for (var i=0;i<divs.length;i++)
+			{
+				if (onediv != document.getElementById(divs[i]))
+				{
+					document.getElementById(divs[i]).style.display='none';
+				}
+			}
+			onediv.style.display = 'block';
+		} 
+		onload = showHide;
+	</script>
+</head>
+
+<body>
+	<!--<button onclick="showHide(1)">Click Here</button>-->
+		<div id="content1" style="display: none">
+			one
+		</div>
+		<div id="content2">
+			two
+		</div>
+		<div id="content3">
+			three
+		</div>
+
+</body>
+
+
+<!--
+	<head>
+		<title>
+			New Bethel CME Youth Outreach
+		</title>
+		<script type="text/javascript">
+	
+		function swapImage(id, path)
+		{
+			var el = document.getElementById(id);
+			el.count = el.count || 0;
+			el.src = path[el.count];
+			el.count = (el.count + 1) ; path.length;
+			if ( el.count == path.length-1)
+			{
+				el.count = 0;
+			}	
+		}
+		
+		function slideshow()
+        {
+		
+            setInterval(function ()
+            {
+                swapImage('slide1', [
+					"Mini-STEM-1.jpg",
+					"Mini-STEM-2.jpg",
+					"Mini-STEM-3.jpg"
+                ]);
+            }, 3000);
+            setInterval(function ()
+            {
+                swapImage('slide2', [
+					"Mini-STEM-4.jpg",
+					"Mini-STEM-5.jpg",
+					"Mini-STEM-6.jpg"
+                ]);
+            }, 2000);
+        }
+				
+		onload = slideshow;
+
+		function showHide(d)
+		{
+			var onediv = document.getElementById(d);
+			var divs=['content1','content2','content3','content4'];
+			for (var i=0;i<divs.length;i++)
+			{
+				if (onediv != document.getElementById(divs[i]))
+				{
+					document.getElementById(divs[i]).style.display='none';
+				}
+			}
+			onediv.style.display = 'block';
+		} 
+		onload = showHide;
+
+
+
+		</script>
+	</head>
+	<body>
+		Blah
+		<br>
+		<img id="slide1" height="200" width="400" src="Mini-STEM-1.jpg">
+		<img id="slide2" height="200" width="400" src="Mini-STEM-4.jpg">
+
+		<div id="content1" style="display: none">
+			one
+		</div>
+		<div id="content2">
+			two
+		</div>
+		<div id="content3">
+			three
+		</div>
+	</body>
+	
+-->
+
+</html>
