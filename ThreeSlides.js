@@ -19,19 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
       slidesWrapper.style.transform = `translateX(${offset}%)`;
     }
 
-    function changeSlide(direction) {
-      currentIndex += direction;
+  function changeSlide(direction) {
+  currentIndex += direction;
 
-      if (currentIndex < 0) {
-        currentIndex = totalPages - 1;
-      }
+  const maxIndex = totalPages - 1;
 
-      if (currentIndex >= totalPages) {
-        currentIndex = 0;
-      }
+  if (currentIndex < 0) {
+    currentIndex = maxIndex;
+  }
 
-      updateSlidePosition();
-    }
+  if (currentIndex > maxIndex) {
+    currentIndex = 0;
+  }
+
+  updateSlidePosition();
+}
+    
 
     function startAutoPlay() {
       stopAutoPlay();
